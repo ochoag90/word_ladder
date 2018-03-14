@@ -17,7 +17,9 @@ end
 
 def word_ladder_neighbors(input_word)
 # 3 -- Starts a loop, selecting from the FOUR_LETTER_WORDS Array
-  FOUR_LETTER_WORDS.select do |word|
+	file = 'raw.txt'
+	File.readlines(file).select do |word|
+	#FOUR_LETTER_WORDS.select do |word|
 # 4 -- Calls the method one_letter_diff? and passes "aloe" and "aahs" for the first test
     one_letter_diff?(input_word, word)
   end
